@@ -1,0 +1,9 @@
+a) Niestety screenów nie zrobilem, ponieważ nie mialem zbyt dużo normalizacji.
+b) Jedyne co zmienilem, to dodałem tabele "Generes", ponieważ kiedyś wystepowała jako rubryka w tabeli "Films".
+c) Wszystkie klucze posiadają AI włączone, nie ma też niepotrzebnych rubryk. 
+d) Tabele zawierają tylko najpotrzebniejsze, najbardziej podstawowe informacje potrzebne do jakichkolwiek operacji na bazie danych.
+
+e) 3NF międzyinnymi wymaga, aby usunąc wszystkie niepotrzebne oraz powtarzające sie kolumny. Niestety w moich przypadku, fragment
+bazy danych nie moze zostać znormalizowany, ponieważ będzie to sprzeczne z moją wizją strony.
+W momencie, gdy pracownik(admin) chcialby sprawdzic kto wypożyczył jakie filmy, wejdzie sobie w spis użytkowników.
+Jednak kolejny klient juz nie ma takiej możliwości, dlatego na stronie przy filmie w rubryce "borrowed_by" będzie wyświetlało sie kto wypożyczył dany film.
