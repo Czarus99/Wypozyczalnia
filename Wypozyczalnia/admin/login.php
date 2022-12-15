@@ -6,21 +6,20 @@ $con = new mysqli("localhost", "root", "", "filmy");
 
 
         if (isset($_POST["login"]) && !empty($_POST["login"]) && isset($_POST["password"]) && !empty($_POST["password"])) {
-            $sql = "SELECT ID FROM `users` WHERE Password='" . $_POST['password'] . "' and Login='" . $_POST['login'] . "';";
+            $sql = "SELECT ID FROM `users` WHERE Password='" . $_POST['password'] . "' and Login='" . $_POST['login'] . "' AND Admin = 1;";
             $wys = $con->query($sql);
             $wynik = $wys->fetch_array();
             if (!empty($wynik["ID"])) {
                 $_SESSION["id"]=$wynik["ID"];
+                $_SESSION["admin"]=1;
                 header('Location: ' . '/Wypozyczalnia/index.php');
             }
 
         }
 
-        if (isset($_SESSION["logged"]) && !empty($_SESSION["logged"])) {
-            echo "<a href='movie-add.php> Dodaj swój film! </a>'";
-
-        } else {
-            echo "<h1>LOGOWANIE</h1>
+        
+          
+            echo "<h1>LOGOWANIE JAKO ADMIN</h1>
                 <br>
                 <br>
                 <form method='post'>
@@ -29,12 +28,7 @@ $con = new mysqli("localhost", "root", "", "filmy");
                     <h3>Podaj haslo:</h3>
                     <input type='password'' name='password''><br>
                     <br><input type='submit' value='Zaloguj'>
-                </form>
-                    <a href='../admin/login.php'>Zaloguj jako admin</a>"
-
-                ;
-
-        }
+                </form>";
+        
 
         $con->close();
-        ?>

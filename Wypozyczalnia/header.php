@@ -12,6 +12,10 @@ if (isset($_SESSION["id"]) && !empty($_SESSION["id"])) {
     echo "<a href='sites/logout.php'>Wyloguj</a>";
     echo "<a href='sites/movie-add.php'> Dodaj swój film! </a>";
     echo "<a href='sites/movie-my.php'> Pokaz swoje filmy! </a>";
+if (isset($_SESSION["admin"])){
+    echo "<a href='admin/add-admin.php'> Nadaj admina</a>";
+    echo "<a href='admin/movie-list.php'>Lista filmów</a>";
+}
 }
 else {
     echo "<a href='sites/login.php'>Zaloguj</a>
