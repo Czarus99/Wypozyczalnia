@@ -1,0 +1,32 @@
+body{
+    margin: 0px;
+}
+
+.glowacz2 {
+    text-align: center;
+    color: black;
+    background-color: burlywood;
+    width: 45%;
+    height: 20%;
+    float: left;
+    text-decoration: none;
+}
+
+.glowacz2 > a{
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.glowacz{
+    width: 55%;
+    text-align: right;
+    height: 20%;
+    background-color: burlywood;
+    color: black;
+    float: left;
+    text-decoration: none;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
